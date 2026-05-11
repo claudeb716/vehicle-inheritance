@@ -2,23 +2,35 @@ package com.pluralsight;
 
 public class Main {
     public static void main(String[] args) {
+        Moped slowRide = new Moped("Suzuki","Red",200,5,2,0,50);
+        //slowRide.setColor("Blue");
 
-        //Create an instance of each Vehicle types
-        // Use setters
-        //Moped
-        Moped mo = new Moped();
-        mo.setMaxWeight(200);
-        mo.setColor("Red");
-        mo.setModel("Suzuki");
-        mo.setTopSpeed(200);
-        System.out.println("Moped Weights: " + mo.getMaxWeight());
-        System.out.println("Moped Color: " + mo.getColor());
-        System.out.println("Moped Model: " + mo.getModel());
-        System.out.println("Moped Top Speed: " + mo.getTopSpeed());
-        System.out.println(mo);
-        // Car
+//        SemiTruck semiTruck = new SemiTruck();
+//        semiTruck.setNumberOfTrailers(2);
+//        semiTruck.setFuelCapacity(100);
+//
+//        HoverCraft hoverCraft = new HoverCraft();
+//        hoverCraft.setAirCushionPressure(50);
+//        hoverCraft.setColor("Blue");
+//
+//        Car car = new Car();
+//        car.setNumberOfDoors(4);
+//        car.setTopSpeed(200);
 
-        //SemiTruck
-        //HoverCraft
+        // Test the functionality of the classes and methods
+        slowRide.ride();
+//        semiTruck.loadCargo();
+//        hoverCraft.hover();
+//        car.openTrunk();
+
+        // Accessing Vehicle getters
+        System.out.println("Color of the Moped: " + slowRide.getColor());
+      //  System.out.println("Fuel capacity of the SemiTruck: " + semiTruck.getFuelCapacity());
+        // System.out.println("Air cushion pressure of the HoverCraft: " + hoverCraft.getAirCushionPressure());
+        // System.out.println("Top speed of the Car: " + car.getTopSpeed());
+
+        //
+
+        System.out.println(slowRide);
     }
 }

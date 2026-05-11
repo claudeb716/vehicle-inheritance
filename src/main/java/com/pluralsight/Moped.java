@@ -1,10 +1,15 @@
 package com.pluralsight;
 
 public class Moped extends Vehicle {
-    //Attributes
     private int maxWeight;
-    // Getters and Setters
+    //Constructor
 
+    public Moped(String model, String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity, int maxWeight) {
+        super(model, color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
+        this.maxWeight = maxWeight;
+    }
+
+    //getters and Setters
     public int getMaxWeight() {
         return maxWeight;
     }
@@ -13,6 +18,20 @@ public class Moped extends Vehicle {
         this.maxWeight = maxWeight;
     }
 
-    //Methods
-    public void ride(){}
+    public void ride() {
+        System.out.println("Riding the moped.");
+    }
+
+    @Override
+    public String toString() {
+        return "Moped{" +
+                "maxWeight=" + maxWeight +
+                ", model='" + getModel() + '\'' +
+                ", color='" + getColor() + '\'' +
+                ", topSpeed=" + getTopSpeed() +
+                ", fuelCapacity=" + getFuelCapacity() +
+                ", numberOfPassengers=" + getNumberOfPassengers() +
+                ", cargoCapacity=" + getCargoCapacity() +
+                '}';
+    }
 }

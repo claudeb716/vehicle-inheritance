@@ -1,14 +1,22 @@
 package com.pluralsight;
 
 public class Vehicle {
-    //Attributes
     private String model;
     private String color;
     private int topSpeed;
-    private int fuelcapacity;
+    private int fuelCapacity;
     private int numberOfPassengers;
     private int cargoCapacity;
-    //Getters and Setters
+    // Constructor
+
+    public Vehicle(String model, String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity) {
+        this.model = model;
+        this.color = color;
+        this.topSpeed = topSpeed;
+        this.fuelCapacity = fuelCapacity;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+    }
 
     public String getModel() {
         return model;
@@ -34,12 +42,12 @@ public class Vehicle {
         this.topSpeed = topSpeed;
     }
 
-    public int getFuelcapacity() {
-        return fuelcapacity;
+    public int getFuelCapacity() {
+        return fuelCapacity;
     }
 
-    public void setFuelcapacity(int fuelcapacity) {
-        this.fuelcapacity = fuelcapacity;
+    public void setFuelCapacity(int fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
     }
 
     public int getNumberOfPassengers() {
@@ -58,21 +66,31 @@ public class Vehicle {
         this.cargoCapacity = cargoCapacity;
     }
 
-    //Methods
-    public void startEngine(){}
-    public void stopEngine(){}
-    public void accelerate(){}
-    public void brake(){}
+    public void startEngine() {
+        System.out.println("Engine started.");
+    }
+
+    public void stopEngine() {
+        System.out.println("Engine stopped.");
+    }
+
+    public void accelerate() {
+        System.out.println("Vehicle accelerated.");
+    }
+
+    public void brake() {
+        System.out.println("Brakes applied.");
+    }
 
     @Override
     public String toString() {
         return "Vehicle{" +
-                "model;" + model + '\'' +
-                ", color:'" + color + '\'' +
-                ", topSpeed:" + topSpeed +
-                ", fuelcapacity:" + fuelcapacity +
-                ", numberOfPassengers:" + numberOfPassengers +
-                ", cargoCapacity:" + cargoCapacity +
+                "model;" + getModel() + '\'' +
+                ", color:'" + getColor() + '\'' +
+                ", topSpeed:" + getTopSpeed() +
+                ", fuelcapacity:" + getFuelCapacity() +
+                ", numberOfPassengers:" + getNumberOfPassengers() +
+                ", cargoCapacity:" + getCargoCapacity() +
                 '}';
     }
 }

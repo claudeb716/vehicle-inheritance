@@ -1,10 +1,15 @@
 package com.pluralsight;
 
-public class SemiTruck extends  Vehicle {
-    //Attributes
+public class SemiTruck extends Vehicle {
     private int numberOfTrailers;
-    //Getters and Setters
+    // Constructor
 
+    public SemiTruck(String model, String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity, int numberOfTrailers) {
+        super(model, color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
+        this.numberOfTrailers = numberOfTrailers;
+    }
+
+    // Getters and Setters
     public int getNumberOfTrailers() {
         return numberOfTrailers;
     }
@@ -13,7 +18,11 @@ public class SemiTruck extends  Vehicle {
         this.numberOfTrailers = numberOfTrailers;
     }
 
-    //Methods
-    public void loadCargo(){}
-    public void unloadCargo(){}
+    public void loadCargo() {
+        System.out.println("Cargo loaded onto the truck.");
+    }
+
+    public void unloadCargo() {
+        System.out.println("Cargo unloaded from the truck.");
+    }
 }
